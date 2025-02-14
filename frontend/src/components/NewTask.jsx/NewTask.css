@@ -1,0 +1,85 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Form Container */
+  .new-task-form {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    z-index: 10;
+    position: absolute;
+    left: 20%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .dark-mode {
+    background-color: #1f2937 !important;
+    color: white !important;
+  }
+  /* Form Group */
+  .form-group {
+    /* margin-bottom: 6px; */
+  }
+  
+  /* Labels */
+  .form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Form Inputs */
+  .form-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Read-only Task ID */
+  input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .new-task-form {
+      max-width: 100%;
+      padding: 15px;
+    }
+  }
+  

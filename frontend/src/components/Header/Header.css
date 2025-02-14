@@ -1,0 +1,81 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Ensure positioning for the popup */
+  }
+  
+  .dark-mode {
+    background-color: #1f2937 !important;
+    color: white !important;
+  }
+  .welcome-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .icon:hover {
+    color: #007bff;
+  }
+  
+  .calendar-container {
+    position: relative; /* Ensure DatePicker popup is positioned correctly */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .calendar-icon {
+    cursor: pointer;
+  }
+  
+  .datepicker-popup {
+    position: absolute;
+    top: 40px; /* Adjust this to position the popup correctly */
+    left: 1;
+    right: 1px;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .selected-date {
+    font-size: 14px;
+    color: #333;
+    margin-left: 8px;
+  }
+  
+  .datepicker-popup .react-datepicker {
+    font-size: 14px;
+  }
+  
+  .datepicker-popup .react-datepicker__day--selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .datepicker-popup .react-datepicker__day:hover {
+    background-color: #e0e0e0;
+  }
+  

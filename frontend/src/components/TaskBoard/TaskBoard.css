@@ -1,0 +1,61 @@
+.task-board {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 640px;
+    overflow-y: auto;
+    color: black;
+    position: relative;
+  }
+
+  .dark-mode {
+    background-color: #1f2937 !important;
+    color: white !important;
+  }
+
+  .task-board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  
+  .task-board-header .add-task {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .task-board-header .add-task:hover {
+    color: #1f2937;
+  }
+  
+  .task-board-header .add-task .add-icon {
+    color: #6b7280;
+  }
+  
+  .task-board-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .task-board::-webkit-scrollbar {
+    width: 6px;
+  }
+  .task-board::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+  

@@ -1,19 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import TaskBoard from "../src/components/TaskBoard/TaskBoard.jsx"
-import Sidebar from './components/Sidebar/Sidebar.jsx'
+import React ,{useEffect}from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import './App.css';
+import Header from './components/Header/Header.jsx';
+import Sidebar from './components/Sidebar/Sidebar.jsx';
+import TaskBoard from './components/TaskBoard/TaskBoard.jsx';
 function App() {
 
+  const taskBoardData =["Todo","In-Progress","Done"];
+
   return (
-    <>
-    <Sidebar/>
-      <TaskBoard/>
-    </>
-  )
+    <div className="App">
+      {/* Header */}
+      <Header />
+
+      {/* Main Layout */}
+      <div className="main-layout">
+        {/* Sidebar */}
+        <Sidebar />
+
+        {/* TaskBoard Container */}
+        <DndProvider backend={HTML5Backend}>
+        <div className="taskboard-container">
+          {
+            taskBoardData.map((ele)=>{
+              return <TaskBoard heading={ele}/>
+            })
+          }
+          
+        </div>
+        </DndProvider>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

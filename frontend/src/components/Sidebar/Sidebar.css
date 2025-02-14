@@ -1,0 +1,101 @@
+/* Sidebar Container */
+.sidebar-container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Sidebar Panel */
+.sidebar {
+    width: 16rem; /* Open state width */
+    height: 100vh;
+    padding: 1rem;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+/* Closed Sidebar */
+.sidebar.closed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Light Mode */
+.sidebar.light {
+    background-color: white;
+    color: black;
+}
+
+/* Dark Mode */
+.sidebar.dark {
+    background-color: #1f2937;
+    color: white;
+}
+
+/* Sidebar Titles */
+.sidebar h1,
+.sidebar h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar Items */
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar li:hover {
+    background-color: #f3f4f6;
+}
+
+/* Dark Mode Hover */
+.sidebar.dark li:hover {
+    background-color: #374151;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: #facc15;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+    position: absolute;
+    left: 16rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #374151;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle-btn:hover {
+    background: #1f2937;
+}
+
+/* Move button when sidebar is closed */
+.sidebar.closed + .sidebar-toggle-btn {
+    left: 0;
+}
